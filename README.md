@@ -1,1 +1,1 @@
-# Asymmetric JWT Signing with AWS KMS using Python
+# JWT Signing with Asymmetric AWS KMS key in Python
