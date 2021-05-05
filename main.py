@@ -3,6 +3,7 @@ import datetime
 import json
 import time
 import jwt
+import boto3
 
 
 def _jwt_kms_assemtric_encryption(jwt_head, jwt_payload, aws_key_arn):
@@ -14,7 +15,7 @@ def _jwt_kms_assemtric_encryption(jwt_head, jwt_payload, aws_key_arn):
         "payload": base64.urlsafe_b64encode(json.dumps(jwt_payload).encode()).decode().rstrip("="),
     }
     message = f'{token_components.get("header")}.{token_components.get("payload")}'
-    client = _get_boto3_client("kms")
+    client = boto3.client('kms')
     response = client.sign(
         KeyId=aws_key_arn,
         Message=message.encode(),
