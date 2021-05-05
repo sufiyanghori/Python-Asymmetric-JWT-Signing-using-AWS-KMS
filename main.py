@@ -27,8 +27,8 @@ def _jwt_kms_assemtric_encryption(jwt_head, jwt_payload, aws_key_arn):
 
 
 if __name__ == "__main__":
-    aws_kms_key_arn = "arn:aws:kms:ap-southeast-2:604941695572:key/20492c6e-c724-4f94-87ba-1df0c76aec60"
-    public_key_file_path = "pk.pem"
+    aws_kms_key_arn = "AWS KMS KEY ARN"
+    public_key_file_path = "PEM KEY FILE"
 
     header = {
         "alg": "RS256",
