@@ -1,1 +1,4 @@
 pyjwt
+boto3
+PyJWT
+cryptography
